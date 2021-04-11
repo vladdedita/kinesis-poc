@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: 
+          content-type: text/plain
+cloud:
+  aws:
+    credentials:
+      accessKey:
+      secretKey:
+    region:
+      static:
+      auto: false
+      use-default-aws-region-chain: true
+    stack:
+      auto: false
+
+logging:
+  level:
+    com.amazonaws.util.EC2MetadataUtils: error
+    com.amazonaws.internal.InstanceMetadataServiceResourceFetcher: error
