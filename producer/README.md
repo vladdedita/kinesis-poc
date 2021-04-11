@@ -3,7 +3,7 @@
 AWS Kinesis Producer Spring Application
 
 On startup, the application streams over a provided resources file (defined in application.yaml) line by line
-and produces every line to remote Kinesis Data Stream
+and produces every line to remote Kinesis Data Stream provided by environment variable (**KINESIS_STREAM_NAME**)
 
 Data Format:
 
