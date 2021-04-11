@@ -22,6 +22,13 @@ Modules:
 - Producer - has been implemented to facilitate stream population - can be ignored if data is produced streaming in kinesis by other means
 - Consumer - consumes and saves data to mongodb
 - Api - REST access to saved data in mongodb
-    
+
+
+
+TODO:
+
+- tests
+- better mongodb data modelling
+- dockerize apps
 
 
