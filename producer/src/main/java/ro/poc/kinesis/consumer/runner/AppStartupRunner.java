@@ -26,9 +26,9 @@ public class AppStartupRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-
-        LOGGER.info(String.format("Application started. Will read file %s and publish messages to Kinesis Stream...", filePath));
-
-        FileUtils.readFileAsStream(filePath).forEach(System.out::println);
+        LOGGER.info(String.format("Reading file %s and publishing messages to Kinesis Stream...", filePath));
+        FileUtils
+                .readFileLines(filePath)
+                .forEach(kinesisSource::produce);
     }
 }

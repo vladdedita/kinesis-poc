@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class FileUtils {
 
-    public static Stream<String> readFileAsStream(String fileName) {
+    public static Stream<String> readFileLines(String fileName) {
         return getFileInputStream(fileName)
                 .map(InputStreamReader::new)
                 .map(BufferedReader::new)
@@ -16,7 +16,7 @@ public class FileUtils {
                 .orElseThrow(() -> new IllegalArgumentException(String.format("File %s not found", fileName)));
     }
 
-    public static Optional<InputStream> getFileInputStream(String file) {
+    private static Optional<InputStream> getFileInputStream(String file) {
         return Optional.ofNullable(FileUtils.class.getClassLoader().getResourceAsStream(file));
     }
 }
