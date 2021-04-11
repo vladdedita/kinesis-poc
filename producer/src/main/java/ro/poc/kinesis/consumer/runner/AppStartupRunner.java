@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 import ro.poc.kinesis.consumer.sink.KinesisSource;
 import ro.poc.kinesis.consumer.util.FileUtils;
 
+import java.util.stream.Stream;
+
 
 @Component
 public class AppStartupRunner implements ApplicationRunner {
@@ -27,8 +29,10 @@ public class AppStartupRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         LOGGER.info(String.format("Reading file %s and publishing messages to Kinesis Stream...", filePath));
-        FileUtils
-                .readFileLines(filePath)
-                .forEach(kinesisSource::produce);
+        try (Stream<String> lines = FileUtils
+                .readFileLines(filePath)) {
+            lines
+                    .forEach(kinesisSource::produce);
+        }
     }
 }

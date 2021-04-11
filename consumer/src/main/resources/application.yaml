@@ -6,6 +6,9 @@ spring:
           destination: ${KINESIS_STREAM_NAME}
           group: test-kinesis-group
           content-type: text/plain
+  data:
+    mongodb:
+      uri: mongodb://root:example@localhost:27017/test?authSource=admin
 cloud:
   aws:
     credentials:
@@ -22,3 +25,4 @@ logging:
   level:
     com.amazonaws.util.EC2MetadataUtils: error
     com.amazonaws.internal.InstanceMetadataServiceResourceFetcher: error
+
