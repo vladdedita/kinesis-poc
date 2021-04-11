@@ -1,8 +1,10 @@
 package ro.poc.kinesis.consumer.sink;
 
 
+import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
+import org.springframework.context.event.EventListener;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -22,10 +24,5 @@ public class KinesisSource {
     public void produce(String payload) {
         source.output().send(MessageBuilder.withPayload(payload).build());
         System.out.println("Sent " + payload);
-    }
-
-    @Scheduled(fixedRate = 2000L)
-    public void sendTestMessage() {
-        produce("Test message");
     }
 }
