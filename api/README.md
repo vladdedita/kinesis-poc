@@ -12,6 +12,7 @@ http://localhost:9000/{eventType}/average?from={timestamp}&to={timestamp} - aver
 
 o GET http://localhost:9000/average - average value by type
 • Response
+
 [
 { "type": {string}, "value": {float} "processedCount": {int} //{number of processed events} },
 …
