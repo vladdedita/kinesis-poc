@@ -1,9 +1,0 @@
-/Users/ded/Projects/personal/kinesis-poc/api/src/main/java/ro/poc/kinesis/api/dto/AverageTypeValueDTO.java
-/Users/ded/Projects/personal/kinesis-poc/api/src/main/java/ro/poc/kinesis/api/ApiApplication.java
-/Users/ded/Projects/personal/kinesis-poc/api/src/main/java/ro/poc/kinesis/api/entity/AverageBucket.java
-/Users/ded/Projects/personal/kinesis-poc/api/src/main/java/ro/poc/kinesis/api/repository/AverageBucketRepository.java
-/Users/ded/Projects/personal/kinesis-poc/api/src/main/java/ro/poc/kinesis/api/entity/model/Sample.java
-/Users/ded/Projects/personal/kinesis-poc/api/src/main/java/ro/poc/kinesis/api/entity/TimeBucket.java
-/Users/ded/Projects/personal/kinesis-poc/api/src/main/java/ro/poc/kinesis/api/repository/TimeBucketRepository.java
-/Users/ded/Projects/personal/kinesis-poc/api/src/main/java/ro/poc/kinesis/api/service/SampleServiceImpl.java
-/Users/ded/Projects/personal/kinesis-poc/api/src/main/java/ro/poc/kinesis/api/controller/SampleController.java
