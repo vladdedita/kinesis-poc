@@ -9,9 +9,10 @@
 <!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
 
-    <artifactId>producer</artifactId>
+    <artifactId>consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>producer</name>
-    <description>POC Kinesis Producer</description>
+
+    <name>consumer</name>
+    <description>POC Kinesis Consumer</description>
 
 </project>

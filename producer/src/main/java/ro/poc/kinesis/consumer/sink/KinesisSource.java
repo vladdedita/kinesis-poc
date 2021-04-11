@@ -1,4 +1,4 @@
-package ro.poc.kinesis.producer.source;
+package ro.poc.kinesis.consumer.sink;
 
 
 import org.springframework.cloud.stream.annotation.EnableBinding;

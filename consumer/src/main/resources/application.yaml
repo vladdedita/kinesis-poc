@@ -2,8 +2,9 @@ spring:
   cloud:
     stream:
       bindings:
-        output:
+        input:
           destination: ${KINESIS_STREAM_NAME}
+          group: test-kinesis-group
           content-type: text/plain
 cloud:
   aws:
