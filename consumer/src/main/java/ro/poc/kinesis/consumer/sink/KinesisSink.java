@@ -19,6 +19,8 @@ public class KinesisSink {
     public void consume(String payload) {
         //TODO Find a way to solve SampleMessageConverter
         SampleDTO sample = SampleDTO.parse(payload);
+        System.out.println("Received: " + sample.toString());
+        mongoService.updateTimeBucket(sample);
         mongoService.updateAverageBucket(sample);
     }
 

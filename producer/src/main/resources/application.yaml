@@ -24,4 +24,4 @@ logging:
 
 kinesis:
   source:
-    filePath: test.log
+    filePath: resident-samples.log

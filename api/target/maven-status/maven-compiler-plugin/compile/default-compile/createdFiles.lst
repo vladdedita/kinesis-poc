@@ -1,0 +1,11 @@
+ro/poc/kinesis/api/entity/AverageBucket.class
+ro/poc/kinesis/api/repository/TimeBucketRepository.class
+ro/poc/kinesis/api/entity/model/Sample$SampleBuilder.class
+ro/poc/kinesis/api/dto/AverageTypeValueDTO$AverageTypeValueDTOBuilder.class
+ro/poc/kinesis/api/entity/model/Sample.class
+ro/poc/kinesis/api/ApiApplication.class
+ro/poc/kinesis/api/repository/AverageBucketRepository.class
+ro/poc/kinesis/api/service/SampleServiceImpl.class
+ro/poc/kinesis/api/controller/SampleController.class
+ro/poc/kinesis/api/entity/TimeBucket.class
+ro/poc/kinesis/api/dto/AverageTypeValueDTO.class

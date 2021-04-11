@@ -18,9 +18,7 @@ public class MongoServiceImpl implements MongoService {
     public void updateTimeBucket(SampleDTO sample) {
         Criteria criteria = Criteria
                 .where("type").is(sample.getType())
-                .and("bucketSize").lt(1000)
-                .and("date")
-                .is(LocalDateTime.now().withSecondOfMinute(0).toDate());
+                .and("bucketSize").lt(100);
 
         Update update = new Update()
                 .push("samples", sample)
@@ -30,7 +28,7 @@ public class MongoServiceImpl implements MongoService {
 
         Query query = Query.query(criteria);
 
-        mongoTemplate.upsert(query, update, SampleDTO.class);
+        mongoTemplate.upsert(query, update, "time");
     }
 
     public void updateAverageBucket(SampleDTO sample) {
